@@ -1,0 +1,67 @@
+while True:
+    print("=" * 50)
+    str_num1 = input("\nInput 1st number: ")
+    while not str_num1.isnumeric():
+        print("Please input a numeric number!")
+        str_num1 = input("Input 1st number: ")
+
+    operation = input("Select Operation: ")
+    while operation not in "+-*/a":
+        print("\nInvalid operation symbol!")
+        operation = input("Select Operation: ")
+
+    str_num2 = input("Input 2nd number: ")
+    while not str_num2.isnumeric():
+        print("\nPlease input a numeric number!")
+        str_num2 = input("Input 2nd number: ")
+
+    num1 = int(str_num1)
+    num2 = int(str_num2)
+
+    match(operation):
+        case "+":
+            print(f"\nSum:        {num1} + {num2} = {num1 + num2}")
+        case "-":
+            print(f"\nDifference: {num1} - {num2} = {num1 - num2}")
+        case "*":
+            print(f"\nProduct:    {num1} * {num2} = {num1 * num2}")
+        case "/":
+            print(f"\nQuotient:   {num1} / {num2} = {num1 / num2}")
+        case "a":
+            print(f"\nAverage:   ({num1} + {num2}) / 2 = {(num1+num2)/2}")
+        
+    choice = input("\nDo you want to do more calculations? [y/n]: ").upper()
+    while choice not in "YN":
+        print("\nInvalid input!")
+        choice = input("\nDo you want to do more calculations? [y/n]: ").upper()
+    if choice == "Y":
+        continue
+    else:
+        print("=" * 50)
+        break
+
+        
+
+
+
+# print()
+# print("=" * 50)
+# print(" " * 15 +"ARITHMETIC OPERATIONS")
+# print("=" * 50)
+# print(f"Sum:        {num1} + {num2} = {num1 + num2}")
+# print("=" * 50)
+# print(f"Difference: {num1} - {num2} = {num1 - num2}")
+# print("=" * 50)
+# print(f"Product:    {num1} * {num2} = {num1 * num2}")
+# print("=" * 50)
+# if num2 == 0:
+#     print("Cannot divide by zero!")
+#     print("=" * 50)
+# else:
+#     print(f"Quotient:   {num1} / {num2} = {num1 / num2}")
+#     print("=" * 50)
+# print(f"Average:   ({num1} + {num2}) / 2 = {(num1+num2)/2}")
+# print("=" * 50)
+
+
+
