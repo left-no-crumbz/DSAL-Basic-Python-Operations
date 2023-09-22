@@ -59,13 +59,13 @@ print("4. Preorder traversal")
 print("5. Postorder traversal")
 print("6. Exit")
 
-choice = int(input("Please enter a number: "))
+choice = int(input("Please enter a number > "))
 root = ""
 match(choice):
     case 1:
-        root = Node(ord(input("Enter a character as the root node: ")))
+        root = Node(ord(input("Enter a character as the root node > ")))
     case 2:
-        branch = input("Enter a character you want to insert")
+        branch = input("Enter a character you want to insert > ")
         root.insert(branch)
     case 3:
         print(root.inorder_traversal(root))
@@ -75,10 +75,8 @@ match(choice):
         print(root.postorder_traversal(root))
     case 6:
         exit()
-
-
-
-
+    case _:
+        print("!!! Invalid Choice...")
 
 root = Node(10)
 root.insert(5)
@@ -87,7 +85,6 @@ root.insert(8)
 root.insert(14)
 root.insert(12)
 root.insert(16)
-
 
 print(root.inorder_traversal(root))
 print(root.preorder_traversal(root))
