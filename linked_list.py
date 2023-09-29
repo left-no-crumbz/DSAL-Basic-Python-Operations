@@ -18,7 +18,7 @@ class LinkedList:
 if __name__ == "__main__":
     linked_list = LinkedList()
 
-    months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    months = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
     nodes = []
     for i in range(len(months)):
          nodes.append(Node(months[i]))
